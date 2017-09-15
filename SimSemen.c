@@ -26,7 +26,7 @@ int main(){
         puts("Ih, rapaz, deu merda, vou sair.");
         exit(1);
     }
-    puts("\t\t\t\tSimSemen v3.0\n\n\t\t\t\t\t\t   Produzido por: TheTrojahn\n\n\tUma distribuiÁ„o Herbert Richards.\n\nOl·, este È um jogo onde vocÍ pergunta e o SimSemen responde, deveras divertido, n„o È mesmo?\n\nVamos l·, pergunte alguma coisa.\n\nDigite sair para sair.\nDigite help para ajuda.\nDigite ensinar para ensinar.\n");
+    puts("\t\t\t\tSimSemen v3.0\n\n\t\t\t\t\t\t   Produzido por: TheTrojahn\n\n\tUma distribui√ß√£o Herbert Richards.\n\nOl√°, este √© um jogo onde voc√™ pergunta e o SimSemen responde, deveras divertido, n√£o √© mesmo?\n\nVamos l√°, pergunte alguma coisa.\n\nDigite sair para sair.\nDigite help para ajuda.\nDigite ensinar para ensinar.\n");
     while(1){
         *(playerText +0) = '\0';
         *(buffer1 +0) = '\0';
@@ -54,11 +54,11 @@ int main(){
             continue;
         }
         if(*(playerText + 0)=='/'&&*(playerText + 1)=='/'){
-            puts("Para o que vossa pessoa est· a comentar em sua pergunta?");
+            puts("Para o que vossa pessoa est√° a comentar em sua pergunta?");
             continue;
         }
         if((*(playerText + 0)=='e'||*(playerText + 0)=='E')&&(*(playerText + 1)=='n'||*(playerText + 1)=='N')&&(*(playerText + 2)=='s'||*(playerText + 2)=='S')&&(*(playerText + 3)=='i'||*(playerText + 3)=='I')&&(*(playerText + 4)=='n'||*(playerText + 4)=='N')&&(*(playerText + 5)=='a'||*(playerText + 5)=='A')&&(*(playerText + 6)=='r'||*(playerText + 6)=='R')&&(*(playerText + 7)=='\0')){
-            wprintf("Regras para criaÁ„o de perguntas e respostas:\nN„o crie perguntas que conflitem com comandos! S„o eles: sair, cls, easter egg, ensinar e help.\nLembre-se que os comandos n„o s„o case sensitive. N„o crie perguntas como SaIr, por exemplo.\nDuas barras s„o entendidas como coment·rios, portanto, n„o crie perguntas que comecem com //.\nLinhas que tÍm somente um enter s„o ignoradas pelo programa.\nA alteraÁ„o de perguntas que j· existem no arquivo sÛ podem ser feitas manualmente.\nAgora est·s a ensinar o SimSemen.\nPergunta: ");
+            printf("Regras para cria√ß√£o de perguntas e respostas:\nN√£o crie perguntas que conflitem com comandos! S√£o eles: sair, cls, easter egg, ensinar e help.\nLembre-se que os comandos n√£o s√£o case sensitive. N√£o crie perguntas como SaIr, por exemplo.\nDuas barras s√£o entendidas como coment√°rios, portanto, n√£o crie perguntas que comecem com //.\nLinhas que t√™m somente um enter s√£o ignoradas pelo programa.\nA altera√ß√£o de perguntas que j√° existem no arquivo s√≥ podem ser feitas manualmente.\nAgora est√°s a ensinar o SimSemen.\nPergunta: ");
             _getws(buffer3);
             *(buffer3 + wcslen(buffer3) + 1) = '\0';
             *(buffer3 + wcslen(buffer3)) = '\n';
@@ -79,7 +79,7 @@ int main(){
                 if(wcscmp(buffer3, buffer1) == 0){
                     rewind(f);
                     j = 1;
-                    puts("J· existe essa pergunta ou vocÍ fez um coment·rio ou ainda vocÍ n„o digitou nada.");
+                    puts("J√° existe essa pergunta ou voc√™ fez um coment√°rio ou ainda voc√™ n√£o digitou nada.");
                     break;
                 }
                 if(!(feof(f)))
@@ -95,7 +95,7 @@ int main(){
             *(buffer1 + 0) = '\0';
             fwprintf(f, L"P%s",buffer3);
             rewind(f);
-            wprintf("Resposta: ");
+            printf("Resposta: ");
             _getws(buffer4);
             *(buffer4 + wcslen(buffer4) + 1) = '\0';
             *(buffer3 + wcslen(buffer3)) = '\n';
@@ -122,7 +122,7 @@ int main(){
         *(playerText + wcslen(playerText)) = '\n';
         do{
             if(fgetws(buffer1, 500, f)==NULL){
-                wprintf("Nossa, nem sei o que dizer.\n\n");
+                printf("Nossa, nem sei o que dizer.\n\n");
                 rewind(f);
                 break;
             }
@@ -138,9 +138,9 @@ int main(){
                     rewind(f);
                     continue;
                 }
-                wprintf("SimSemen: ");
+                printf("SimSemen: ");
                 for(i=0;i<501;i++){
-                    wprintf("%c", *(buffer2 + i +1));
+                    printf("%c", *(buffer2 + i +1));
                     if(*(buffer2 + i + 1) == '\n')
                         break;
                 }
