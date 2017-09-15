@@ -1,0 +1,23 @@
+//O formato é uma linha para pergunta e a linha de baixo para a resposta.
+//Não crie perguntas que conflitem com comandos! São eles: sair, cls, easter egg, ensinar e help.
+//Lembre-se que os comandos não são case sensitive. Não crie perguntas como SaIr, por exemplo.
+//Duas barras são entendidas como comentários, portanto, não crie perguntas que comecem com //.
+//Linhas que têm somente um enter são ignoradas pelo programa.
+//A alteração de perguntas que já existem neste arquivo só podem ser feitas manualmente.
+//Sempre deixe dois enters a mais no final deste arquivo para previnir eventuais bugs.
+//Ponha um P antes da frase para identificar que é uma pergunta e um R para a resposta.
+//Exemplo: POlá e na outra linha ROlá, tudo bem?
+//Enters que não estão no final do arquivo podem ser apagados.
+//Para criar perguntas e respostas que contenham acentos, faça isso de dentro do programa.
+//Nunca deixe um enter entre uma pergunta e uma resposta, pois ocorre um erro.
+
+Pkirill ‚ gay?
+RSim
+
+
+PNikolas ‚ gay?
+RCertamente que sim.
+
+PTrojahn ‚ gay?
+RCertamente que nÆo.
+
